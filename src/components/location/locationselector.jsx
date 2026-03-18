@@ -7,8 +7,8 @@ import {
   Clock,
   Globe
 } from 'lucide-react'
-import { useLocation } from '../../hooks/useLocation'
-import { Button } from '../common/Button'
+import { useLocation } from '../../hooks/uselocation'
+import { Button } from '../common/button'
 
 export function LocationSelector({ onClose }) {
   const { getCurrentLocation, setManualLocation } = useLocation()
