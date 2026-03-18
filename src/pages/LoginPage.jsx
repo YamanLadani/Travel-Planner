@@ -68,7 +68,7 @@ const LoginPage = () => {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -100,7 +100,7 @@ const LoginPage = () => {
     setGeneralError('')
     setIsLoading(true)
     try {
-      const response = await fetch('http://localhost:5000/api/auth/google', {
+      const response = await fetch('/api/auth/google', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ credential: credentialResponse.credential })
@@ -139,7 +139,7 @@ const LoginPage = () => {
     setPhoneError('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/send-otp', {
+      const response = await fetch('/api/auth/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: phoneNumber })
@@ -172,7 +172,7 @@ const LoginPage = () => {
     setPhoneError('')
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/verify-otp', {
+      const response = await fetch('/api/auth/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phone: phoneNumber, otp: otpCode })
